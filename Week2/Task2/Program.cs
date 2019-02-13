@@ -8,6 +8,7 @@ namespace Task2
     {
         static void Main(string[] args)
         {
+            //read the information
             StreamReader st = new StreamReader("input.txt");
             StreamWriter w = new StreamWriter("output.txt");
             string[] s = st.ReadLine().Split();
@@ -18,7 +19,9 @@ namespace Task2
             }
             for (int i = 0; i < a.Length; i++)
             {
+                //make the variable for testing num is prime or not
                 bool ok = true;
+                // 1 - isn't prime, it has one divider
                 if (a[i] == 1)
                 {
                     continue;
@@ -30,7 +33,7 @@ namespace Task2
                         ok = false;
                     }
                 }
-
+                // print all primes
                 if (ok)
                 {
                     w.Write(a[i] + " ");
