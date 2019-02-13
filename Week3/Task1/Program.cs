@@ -49,17 +49,19 @@ namespace Task1
             FileSystemInfo[] fs = directory.GetFileSystemInfos();
             sz = fs.Length;
             //Print all folders and files
-            for (int i=0,k=0; i<fs.Length; i++)
+            for (int i = 0, k = 0; i < fs.Length; i++)
             {
                 if (ok == false && fs[i].Name.StartsWith("."))
                 {
                     continue;
                 }
-                Color(fs[i],i);
+                Color(fs[i], i);
                 Console.WriteLine((fs[i].Name));
                 k++;
             }
         }
+      
+        
         // Moving cursor
         public void Up()
         {
@@ -85,7 +87,11 @@ namespace Task1
                 if (consoleKey.Key == ConsoleKey.DownArrow)
                     Down();
                 if (consoleKey.Key == ConsoleKey.RightArrow)
+                {
                     ok = false;
+                    
+                }
+                    
                 if (consoleKey.Key == ConsoleKey.LeftArrow)
                     ok = true; 
                 }

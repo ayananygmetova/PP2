@@ -1,0 +1,7 @@
+C:\Users\Ayana\Documents\PP2\Week1\Task2\bin\Debug\Task2.exe.config
+C:\Users\Ayana\Documents\PP2\Week1\Task2\bin\Debug\Task2.exe
+C:\Users\Ayana\Documents\PP2\Week1\Task2\bin\Debug\Task2.pdb
+C:\Users\Ayana\Documents\PP2\Week1\Task2\obj\Debug\Task2.csprojAssemblyReference.cache
+C:\Users\Ayana\Documents\PP2\Week1\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
+C:\Users\Ayana\Documents\PP2\Week1\Task2\obj\Debug\Task2.exe
+C:\Users\Ayana\Documents\PP2\Week1\Task2\obj\Debug\Task2.pdb
