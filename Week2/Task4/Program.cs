@@ -11,22 +11,24 @@ namespace Task4
     {
         static void Main(string[] args)
         {
-             string path1 = @"C:/Users/Ayana/Documents/Proj";
-             DirectoryInfo dir = Directory.CreateDirectory(path1);
+            //Creating directory path1
+            string path1 = @"C:/Users/Ayana/Documents/Proj";
+            DirectoryInfo dir = Directory.CreateDirectory(path1);
+            //Creating file in folder - proj1
             FileInfo f = new FileInfo(@"C:/Users/Ayana/Documents/Proj/Info.txt");
             if (!f.Exists) {
                 f.Create();
             }
-             //File.Create(@"/Users/Ayana/Documents/Proj/Info.txt");
-             string path2 = @"C:/Users/Ayana/Documents/Proj2";
-             DirectoryInfo dir2 = Directory.CreateDirectory(path2);
+            //Create other folder in which the file will be coped
+            string path2 = @"C:/Users/Ayana/Documents/Proj2";
+            DirectoryInfo dir2 = Directory.CreateDirectory(path2);
             if (!dir2.Exists) {
                 dir2.Create();
             }
-
-             File.Copy(@"C:/Users/Ayana/Documents/Proj/Info.txt", @"C:/Users/Ayana/Documents/Proj2/Info.txt");
-             File.Delete(@"C:/Users/Ayana/Documents/Proj/Info.txt");
-             
+            // Coping the file to folder proj2
+            File.Copy(@"C:/Users/Ayana/Documents/Proj/Info.txt", @"C:/Users/Ayana/Documents/Proj2/Info.txt");
+            //delete original file in proj1
+            File.Delete(@"C:/Users/Ayana/Documents/Proj/Info.txt");
         }
     }
 }
