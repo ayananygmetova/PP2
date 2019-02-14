@@ -11,14 +11,22 @@ namespace Task4
     {
         static void Main(string[] args)
         {
-            string path1 = "/Users/Ayana/Documents/Proj";
-            DirectoryInfo dir = Directory.CreateDirectory(path1);
-            File.Create("/Users/Ayana/Documents/Proj/Info.txt");
-            string path2 = "/Users/Ayana/Documents/Proj2";
-            DirectoryInfo dir2 = Directory.CreateDirectory(path2);
-            File.Copy("/Users/Ayana/Documents/Proj/Info.txt", "/Users/Ayana/Documents/Proj2/Info.txt");
-            File.Delete("path1/Info.txt");
+             string path1 = @"C:/Users/Ayana/Documents/Proj";
+             DirectoryInfo dir = Directory.CreateDirectory(path1);
+            FileInfo f = new FileInfo(@"C:/Users/Ayana/Documents/Proj/Info.txt");
+            if (!f.Exists) {
+                f.Create();
+            }
+             //File.Create(@"/Users/Ayana/Documents/Proj/Info.txt");
+             string path2 = @"C:/Users/Ayana/Documents/Proj2";
+             DirectoryInfo dir2 = Directory.CreateDirectory(path2);
+            if (!dir2.Exists) {
+                dir2.Create();
+            }
 
+             File.Copy(@"C:/Users/Ayana/Documents/Proj/Info.txt", @"C:/Users/Ayana/Documents/Proj2/Info.txt");
+             File.Delete(@"C:/Users/Ayana/Documents/Proj/Info.txt");
+             
         }
     }
 }
