@@ -18,15 +18,15 @@ namespace Task3
         {
             DirectoryInfo[] dir = d.GetDirectories();
             FileInfo[] f = d.GetFiles();
-            Print(lvl);
+            Print(lvl);                                 //show the depth of files or folders
             foreach (FileInfo fi in f)
             {
-                Console.WriteLine("     " + fi.Name);
+                Console.WriteLine("     " + fi.Name);   //show files
             }
             foreach (DirectoryInfo di in dir)
             {
-                Console.WriteLine("     " + di.Name);
-                Direct(di, lvl++);
+                Console.WriteLine("     " + di.Name);   //show directories
+                Direct(di, lvl++);                      //sent values for function again to see all folders, subfolders, files and etc
             }
 
 
@@ -35,7 +35,7 @@ namespace Task3
         {
             DirectoryInfo d = new DirectoryInfo("/Users/Ayana/Documents/PP2/Week1");
             Console.WriteLine(d.Name);
-            Direct(d, 0);
+            Direct(d, 0);                               //call the function
             Console.ReadKey();
         }
     }
